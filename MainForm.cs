@@ -50,12 +50,12 @@ namespace NativeScribe
             cboSearch.SelectedIndex = Index;
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void BtnHome_Click(object sender, EventArgs e)
         {
             //openChildForm(new HomeForm());
         }
 
-        private void btnDict_Click(object sender, EventArgs e)
+        private void BtnDict_Click(object sender, EventArgs e)
         {
             activeForm.Close();
 
@@ -66,9 +66,9 @@ namespace NativeScribe
             lboWord.Enabled = true;
         }
 
-        private void btnAbout_Click(object sender, EventArgs e)
+        private void BtnAbout_Click(object sender, EventArgs e)
         {
-            openChildForm(new AboutForm());
+            OpenChildForm(new AboutForm());
 
             btnDict.Enabled = true;
             btnAbout.Enabled = false;
@@ -77,14 +77,17 @@ namespace NativeScribe
             lboWord.Enabled = false;
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Are you sure?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private Form activeForm = null;
 
-        private void openChildForm(Form childForm)
+        private void OpenChildForm(Form childForm)
         {
             if (activeForm != null) activeForm.Close();
             activeForm = childForm;
@@ -97,11 +100,11 @@ namespace NativeScribe
             childForm.Show();
         }
 
-        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        private void PanelChildForm_Paint(object sender, PaintEventArgs e)
         {
         }
 
-        private void lboWord_SelectedIndexChanged(object sender, EventArgs e)
+        private void LboWord_SelectedIndexChanged(object sender, EventArgs e)
         {
             Index = lboWord.SelectedIndex;
 
@@ -112,7 +115,7 @@ namespace NativeScribe
             webDesc.DocumentText = Desc;
         }
 
-        private void cboSearch_SelectedIndexChanged(object sender, EventArgs e)
+        private void CboSearch_SelectedIndexChanged(object sender, EventArgs e)
         {
             Index = cboSearch.SelectedIndex;
 
@@ -123,13 +126,13 @@ namespace NativeScribe
             webDesc.DocumentText = Desc;
         }
 
-        private void webDesc_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        private void WebDesc_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new AboutForm());
+            OpenChildForm(new AboutForm());
 
             btnDict.Enabled = true;
             btnAbout.Enabled = false;
@@ -138,9 +141,12 @@ namespace NativeScribe
             lboWord.Enabled = false;
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Are you sure?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 

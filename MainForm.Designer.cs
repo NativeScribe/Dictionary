@@ -66,7 +66,7 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(608, 499);
             this.panelChildForm.TabIndex = 0;
-            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelChildForm_Paint);
             // 
             // lboWord
             // 
@@ -80,7 +80,7 @@
             this.lboWord.Name = "lboWord";
             this.lboWord.Size = new System.Drawing.Size(248, 388);
             this.lboWord.TabIndex = 0;
-            this.lboWord.SelectedIndexChanged += new System.EventHandler(this.lboWord_SelectedIndexChanged);
+            this.lboWord.SelectedIndexChanged += new System.EventHandler(this.LboWord_SelectedIndexChanged);
             // 
             // webDesc
             // 
@@ -93,7 +93,7 @@
             this.webDesc.Name = "webDesc";
             this.webDesc.Size = new System.Drawing.Size(306, 422);
             this.webDesc.TabIndex = 0;
-            this.webDesc.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webDesc_DocumentCompleted);
+            this.webDesc.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.WebDesc_DocumentCompleted);
             // 
             // cboSearch
             // 
@@ -108,7 +108,7 @@
             this.cboSearch.Name = "cboSearch";
             this.cboSearch.Size = new System.Drawing.Size(248, 24);
             this.cboSearch.TabIndex = 0;
-            this.cboSearch.SelectedIndexChanged += new System.EventHandler(this.cboSearch_SelectedIndexChanged);
+            this.cboSearch.SelectedIndexChanged += new System.EventHandler(this.CboSearch_SelectedIndexChanged);
             // 
             // panelSideMenu
             // 
@@ -164,7 +164,7 @@
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // btnAbout
             // 
@@ -182,7 +182,7 @@
             this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAbout.UseVisualStyleBackColor = true;
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            this.btnAbout.Click += new System.EventHandler(this.BtnAbout_Click);
             // 
             // btnConfig
             // 
@@ -218,7 +218,7 @@
             this.btnDict.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDict.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDict.UseVisualStyleBackColor = true;
-            this.btnDict.Click += new System.EventHandler(this.btnDict_Click);
+            this.btnDict.Click += new System.EventHandler(this.BtnDict_Click);
             // 
             // btnHome
             // 
@@ -237,7 +237,7 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
             // panelLogo
             // 
@@ -268,13 +268,13 @@
             this.developerToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // scholarToolStripMenuItem
             // 
             this.scholarToolStripMenuItem.Name = "scholarToolStripMenuItem";
-            this.scholarToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.scholarToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.scholarToolStripMenuItem.Text = "Scholar";
             // 
             // developerToolStripMenuItem
@@ -282,28 +282,28 @@
             this.developerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jSONEditorToolStripMenuItem});
             this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
-            this.developerToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.developerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.developerToolStripMenuItem.Text = "Developer";
             // 
             // jSONEditorToolStripMenuItem
             // 
             this.jSONEditorToolStripMenuItem.Name = "jSONEditorToolStripMenuItem";
-            this.jSONEditorToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.jSONEditorToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.jSONEditorToolStripMenuItem.Text = "JSON Editor";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -313,7 +313,7 @@
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4);
