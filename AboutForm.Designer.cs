@@ -49,7 +49,7 @@
             this.panelTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(592, 82);
+            this.panelTop.Size = new System.Drawing.Size(592, 99);
             this.panelTop.TabIndex = 0;
             // 
             // panelLogo
@@ -58,9 +58,9 @@
             this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.panelLogo.Location = new System.Drawing.Point(0, 82);
+            this.panelLogo.Location = new System.Drawing.Point(0, 99);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(592, 82);
+            this.panelLogo.Size = new System.Drawing.Size(592, 99);
             this.panelLogo.TabIndex = 0;
             // 
             // panelDesc
@@ -71,9 +71,9 @@
             this.panelDesc.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.panelDesc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelDesc.Location = new System.Drawing.Point(0, 164);
+            this.panelDesc.Location = new System.Drawing.Point(0, 198);
             this.panelDesc.Name = "panelDesc";
-            this.panelDesc.Size = new System.Drawing.Size(592, 82);
+            this.panelDesc.Size = new System.Drawing.Size(592, 99);
             this.panelDesc.TabIndex = 0;
             // 
             // labelVersion
@@ -110,9 +110,9 @@
             this.panelDev.Controls.Add(this.labelWebsite);
             this.panelDev.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.panelDev.Location = new System.Drawing.Point(0, 246);
+            this.panelDev.Location = new System.Drawing.Point(0, 297);
             this.panelDev.Name = "panelDev";
-            this.panelDev.Size = new System.Drawing.Size(592, 82);
+            this.panelDev.Size = new System.Drawing.Size(592, 99);
             this.panelDev.TabIndex = 0;
             // 
             // linkProject
@@ -144,9 +144,9 @@
             this.panelBottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBottom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.panelBottom.Location = new System.Drawing.Point(0, 328);
+            this.panelBottom.Location = new System.Drawing.Point(0, 396);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(592, 82);
+            this.panelBottom.Size = new System.Drawing.Size(592, 60);
             this.panelBottom.TabIndex = 0;
             // 
             // AboutForm
