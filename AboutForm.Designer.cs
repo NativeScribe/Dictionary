@@ -42,13 +42,13 @@
             this.lnk_Version = new System.Windows.Forms.LinkLabel();
             this.panelBottom = new System.Windows.Forms.Panel();
             this.grpBxMIT = new System.Windows.Forms.GroupBox();
+            this.lbl_Desc6 = new System.Windows.Forms.Label();
+            this.lbl_Desc5 = new System.Windows.Forms.Label();
+            this.lbl_Desc4 = new System.Windows.Forms.Label();
             this.lbl_Desc3 = new System.Windows.Forms.Label();
             this.lbl_Desc2 = new System.Windows.Forms.Label();
             this.lbl_Desc = new System.Windows.Forms.Label();
             this.lbl_Author = new System.Windows.Forms.Label();
-            this.lbl_Desc4 = new System.Windows.Forms.Label();
-            this.lbl_Desc5 = new System.Windows.Forms.Label();
-            this.lbl_Desc6 = new System.Windows.Forms.Label();
             this.panelDesc.SuspendLayout();
             this.panelDev.SuspendLayout();
             this.panelBottom.SuspendLayout();
@@ -152,6 +152,7 @@
             this.linkProject.TabStop = true;
             this.linkProject.Text = "https://nativescribe.syafiqhadzir.dev/";
             this.linkProject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkProject.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkProject_LinkClicked);
             // 
             // lnk_License
             // 
@@ -164,6 +165,7 @@
             this.lnk_License.TabStop = true;
             this.lnk_License.Text = "License and Open Source Notices";
             this.lnk_License.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnk_License.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Lnk_License_LinkClicked);
             // 
             // labelWebsite
             // 
@@ -191,6 +193,7 @@
             this.lnk_Version.Text = "v1.1a (release notes)";
             this.lnk_Version.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lnk_Version.UseCompatibleTextRendering = true;
+            this.lnk_Version.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Lnk_Version_LinkClicked);
             // 
             // panelBottom
             // 
@@ -218,6 +221,35 @@
             this.grpBxMIT.TabIndex = 0;
             this.grpBxMIT.TabStop = false;
             this.grpBxMIT.Text = "MIT License";
+            // 
+            // lbl_Desc6
+            // 
+            this.lbl_Desc6.AutoSize = true;
+            this.lbl_Desc6.Location = new System.Drawing.Point(30, 140);
+            this.lbl_Desc6.Name = "lbl_Desc6";
+            this.lbl_Desc6.Size = new System.Drawing.Size(215, 17);
+            this.lbl_Desc6.TabIndex = 0;
+            this.lbl_Desc6.Text = "or other dealings in the software.";
+            // 
+            // lbl_Desc5
+            // 
+            this.lbl_Desc5.AutoSize = true;
+            this.lbl_Desc5.Location = new System.Drawing.Point(30, 123);
+            this.lbl_Desc5.Name = "lbl_Desc5";
+            this.lbl_Desc5.Size = new System.Drawing.Size(518, 17);
+            this.lbl_Desc5.TabIndex = 0;
+            this.lbl_Desc5.Text = "tort or otherwise, arising from, out of or in connection with the software or the" +
+    " use";
+            // 
+            // lbl_Desc4
+            // 
+            this.lbl_Desc4.AutoSize = true;
+            this.lbl_Desc4.Location = new System.Drawing.Point(30, 106);
+            this.lbl_Desc4.Name = "lbl_Desc4";
+            this.lbl_Desc4.Size = new System.Drawing.Size(517, 17);
+            this.lbl_Desc4.TabIndex = 0;
+            this.lbl_Desc4.Text = "be liable for any claim, damages or other liability, whether in an actionof contr" +
+    "act,";
             // 
             // lbl_Desc3
             // 
@@ -256,35 +288,6 @@
             this.lbl_Author.Size = new System.Drawing.Size(213, 17);
             this.lbl_Author.TabIndex = 0;
             this.lbl_Author.Text = "Copyright (c) 2020 Syafiq Hadzir";
-            // 
-            // lbl_Desc4
-            // 
-            this.lbl_Desc4.AutoSize = true;
-            this.lbl_Desc4.Location = new System.Drawing.Point(30, 106);
-            this.lbl_Desc4.Name = "lbl_Desc4";
-            this.lbl_Desc4.Size = new System.Drawing.Size(517, 17);
-            this.lbl_Desc4.TabIndex = 0;
-            this.lbl_Desc4.Text = "be liable for any claim, damages or other liability, whether in an actionof contr" +
-    "act,";
-            // 
-            // lbl_Desc5
-            // 
-            this.lbl_Desc5.AutoSize = true;
-            this.lbl_Desc5.Location = new System.Drawing.Point(30, 123);
-            this.lbl_Desc5.Name = "lbl_Desc5";
-            this.lbl_Desc5.Size = new System.Drawing.Size(518, 17);
-            this.lbl_Desc5.TabIndex = 0;
-            this.lbl_Desc5.Text = "tort or otherwise, arising from, out of or in connection with the software or the" +
-    " use";
-            // 
-            // lbl_Desc6
-            // 
-            this.lbl_Desc6.AutoSize = true;
-            this.lbl_Desc6.Location = new System.Drawing.Point(30, 140);
-            this.lbl_Desc6.Name = "lbl_Desc6";
-            this.lbl_Desc6.Size = new System.Drawing.Size(215, 17);
-            this.lbl_Desc6.TabIndex = 0;
-            this.lbl_Desc6.Text = "or other dealings in the software.";
             // 
             // AboutForm
             // 
