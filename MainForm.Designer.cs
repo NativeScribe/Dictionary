@@ -95,9 +95,9 @@ namespace NativeScribe
             this.lblVersion.AutoSize = true;
             this.lblVersion.Location = new System.Drawing.Point(8, 27);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(118, 16);
+            this.lblVersion.Size = new System.Drawing.Size(126, 16);
             this.lblVersion.TabIndex = 0;
-            this.lblVersion.Text = "v1.0 (Build 200622)";
+            this.lblVersion.Text = "v1.1a (Build 201217)";
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExit
@@ -247,7 +247,7 @@ namespace NativeScribe
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.UpdateToolStripMenuItem_Click);
             // 
