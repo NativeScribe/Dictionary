@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.lboWord = new System.Windows.Forms.ListBox();
-            this.webDesc = new System.Windows.Forms.WebBrowser();
-            this.cboSearch = new System.Windows.Forms.ComboBox();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelVer = new System.Windows.Forms.Panel();
             this.lblVersion = new System.Windows.Forms.Label();
@@ -49,7 +46,6 @@
             this.jSONEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelChildForm.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
             this.panelVer.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -57,9 +53,6 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Controls.Add(this.lboWord);
-            this.panelChildForm.Controls.Add(this.webDesc);
-            this.panelChildForm.Controls.Add(this.cboSearch);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.panelChildForm.Location = new System.Drawing.Point(222, 0);
@@ -67,48 +60,6 @@
             this.panelChildForm.Size = new System.Drawing.Size(608, 499);
             this.panelChildForm.TabIndex = 0;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelChildForm_Paint);
-            // 
-            // lboWord
-            // 
-            this.lboWord.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lboWord.FormattingEnabled = true;
-            this.lboWord.ItemHeight = 16;
-            this.lboWord.Location = new System.Drawing.Point(24, 67);
-            this.lboWord.Margin = new System.Windows.Forms.Padding(4);
-            this.lboWord.Name = "lboWord";
-            this.lboWord.Size = new System.Drawing.Size(248, 388);
-            this.lboWord.TabIndex = 0;
-            this.lboWord.SelectedIndexChanged += new System.EventHandler(this.LboWord_SelectedIndexChanged);
-            // 
-            // webDesc
-            // 
-            this.webDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.webDesc.Location = new System.Drawing.Point(280, 33);
-            this.webDesc.Margin = new System.Windows.Forms.Padding(4);
-            this.webDesc.MinimumSize = new System.Drawing.Size(24, 22);
-            this.webDesc.Name = "webDesc";
-            this.webDesc.Size = new System.Drawing.Size(306, 422);
-            this.webDesc.TabIndex = 0;
-            this.webDesc.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.WebDesc_DocumentCompleted);
-            // 
-            // cboSearch
-            // 
-            this.cboSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cboSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboSearch.FormattingEnabled = true;
-            this.cboSearch.Location = new System.Drawing.Point(24, 33);
-            this.cboSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.cboSearch.Name = "cboSearch";
-            this.cboSearch.Size = new System.Drawing.Size(248, 24);
-            this.cboSearch.TabIndex = 0;
-            this.cboSearch.SelectedIndexChanged += new System.EventHandler(this.CboSearch_SelectedIndexChanged);
             // 
             // panelSideMenu
             // 
@@ -323,7 +274,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NativeScribe™";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.panelChildForm.ResumeLayout(false);
             this.panelSideMenu.ResumeLayout(false);
             this.panelSideMenu.PerformLayout();
             this.panelVer.ResumeLayout(false);
@@ -345,9 +295,6 @@
         private System.Windows.Forms.Button btnDict;
         private System.Windows.Forms.Panel panelVer;
         private System.Windows.Forms.Label lblVersion;
-        private System.Windows.Forms.WebBrowser webDesc;
-        private System.Windows.Forms.ListBox lboWord;
-        private System.Windows.Forms.ComboBox cboSearch;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scholarToolStripMenuItem;

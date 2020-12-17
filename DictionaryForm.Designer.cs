@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DictionaryForm));
             this.webDesc = new System.Windows.Forms.WebBrowser();
             this.lboWord = new System.Windows.Forms.ListBox();
             this.cboSearch = new System.Windows.Forms.ComboBox();
@@ -35,11 +36,11 @@
             // 
             // webDesc
             // 
-            this.webDesc.Location = new System.Drawing.Point(273, 28);
+            this.webDesc.Location = new System.Drawing.Point(272, 13);
             this.webDesc.Margin = new System.Windows.Forms.Padding(4);
             this.webDesc.MinimumSize = new System.Drawing.Size(24, 22);
             this.webDesc.Name = "webDesc";
-            this.webDesc.Size = new System.Drawing.Size(306, 422);
+            this.webDesc.Size = new System.Drawing.Size(323, 473);
             this.webDesc.TabIndex = 0;
             // 
             // lboWord
@@ -67,13 +68,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 460);
+            this.ClientSize = new System.Drawing.Size(608, 499);
             this.Controls.Add(this.lboWord);
             this.Controls.Add(this.cboSearch);
             this.Controls.Add(this.webDesc);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DictionaryForm";
             this.Text = "Dictionary";
             this.Load += new System.EventHandler(this.DictionaryForm_Load);
