@@ -31,19 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DictionaryForm));
             this.cbWord = new System.Windows.Forms.ComboBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
+            this.lbWord = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // cbWord
             // 
-            this.cbWord.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbWord.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbWord.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbWord.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.cbWord.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cbWord.FormattingEnabled = true;
             this.cbWord.Location = new System.Drawing.Point(16, 28);
             this.cbWord.Margin = new System.Windows.Forms.Padding(4);
             this.cbWord.Name = "cbWord";
-            this.cbWord.Size = new System.Drawing.Size(248, 408);
+            this.cbWord.Size = new System.Drawing.Size(248, 24);
             this.cbWord.TabIndex = 0;
             this.cbWord.SelectedIndexChanged += new System.EventHandler(this.CbWord_SelectedIndexChanged);
             // 
@@ -56,11 +56,23 @@
             this.txtDesc.Size = new System.Drawing.Size(325, 475);
             this.txtDesc.TabIndex = 0;
             // 
+            // lbWord
+            // 
+            this.lbWord.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbWord.FormattingEnabled = true;
+            this.lbWord.ItemHeight = 16;
+            this.lbWord.Location = new System.Drawing.Point(16, 59);
+            this.lbWord.Name = "lbWord";
+            this.lbWord.Size = new System.Drawing.Size(248, 388);
+            this.lbWord.TabIndex = 0;
+            this.lbWord.SelectedIndexChanged += new System.EventHandler(this.LbWord_SelectedIndexChanged);
+            // 
             // DictionaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 499);
+            this.Controls.Add(this.lbWord);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.cbWord);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -80,5 +92,6 @@
         #endregion
         private System.Windows.Forms.ComboBox cbWord;
         private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.ListBox lbWord;
     }
 }

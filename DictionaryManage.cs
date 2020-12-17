@@ -22,6 +22,12 @@ namespace NativeScribe
             combo.DataSource = items.Items;
         }
 
+        /// <param name="list"></param>
+        public void LoadDataToListBox(ListBox list)
+        {
+            list.DataSource = items.Items;
+        }
+
         public void Serialize()
         {
             SerializeToXML(items, filePath);
