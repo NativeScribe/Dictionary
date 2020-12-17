@@ -14,13 +14,13 @@ namespace NativeScribe
 
         private void DictionaryForm_Load(object sender, EventArgs e)
         {
-            cboSearch.DisplayMember = "Key";
+            cbWord.DisplayMember = "Key";
 
             dictionary = new DictionaryManage();
-            dictionary.LoadDataToComboBox(cboSearch);
+            dictionary.LoadDataToComboBox(cbWord);
         }
 
-        private void CboSearch_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbWord_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox cb = sender as ComboBox;
 
@@ -30,7 +30,7 @@ namespace NativeScribe
             }
 
             Dictionary data = cb.SelectedItem as Dictionary;
-            txtDesc.Text = data.Desc;
+            txtDesc.Text = data.Explaination;
         }
     }
 }

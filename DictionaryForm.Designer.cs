@@ -29,28 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DictionaryForm));
-            this.cboSearch = new System.Windows.Forms.ComboBox();
+            this.cbWord = new System.Windows.Forms.ComboBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // cboSearch
+            // cbWord
             // 
-            this.cboSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cboSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.cboSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.cboSearch.FormattingEnabled = true;
-            this.cboSearch.Location = new System.Drawing.Point(16, 28);
-            this.cboSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.cboSearch.Name = "cboSearch";
-            this.cboSearch.Size = new System.Drawing.Size(248, 408);
-            this.cboSearch.TabIndex = 0;
+            this.cbWord.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbWord.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbWord.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cbWord.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.cbWord.FormattingEnabled = true;
+            this.cbWord.Location = new System.Drawing.Point(16, 28);
+            this.cbWord.Margin = new System.Windows.Forms.Padding(4);
+            this.cbWord.Name = "cbWord";
+            this.cbWord.Size = new System.Drawing.Size(248, 408);
+            this.cbWord.TabIndex = 0;
+            this.cbWord.SelectedIndexChanged += new System.EventHandler(this.CbWord_SelectedIndexChanged);
             // 
             // txtDesc
             // 
             this.txtDesc.Location = new System.Drawing.Point(271, 12);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
+            this.txtDesc.ReadOnly = true;
             this.txtDesc.Size = new System.Drawing.Size(325, 475);
             this.txtDesc.TabIndex = 0;
             // 
@@ -60,7 +62,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 499);
             this.Controls.Add(this.txtDesc);
-            this.Controls.Add(this.cboSearch);
+            this.Controls.Add(this.cbWord);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -76,7 +78,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox cboSearch;
+        private System.Windows.Forms.ComboBox cbWord;
         private System.Windows.Forms.TextBox txtDesc;
     }
 }

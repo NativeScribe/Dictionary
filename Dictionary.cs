@@ -5,7 +5,7 @@
         private string key;
         public string Key { get => key; set => key = value; }
 
-        private string desc;
-        public string Desc { get => desc; set => desc = value; }
+        private string explaination;
+        public string Explaination { get => explaination; set => explaination = value; }
     }
 }

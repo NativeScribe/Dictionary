@@ -76,6 +76,8 @@ namespace NativeScribe
 
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            activeForm.Close();
+
             OpenChildForm(new AboutForm());
 
             btnDict.Enabled = true;
@@ -88,6 +90,8 @@ namespace NativeScribe
             {
                 Application.Exit();
             }
+
+            dictionary.Serialize();
         }
     }
 }
