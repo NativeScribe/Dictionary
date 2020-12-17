@@ -29,49 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DictionaryForm));
-            this.webDesc = new System.Windows.Forms.WebBrowser();
-            this.lboWord = new System.Windows.Forms.ListBox();
             this.cboSearch = new System.Windows.Forms.ComboBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // webDesc
-            // 
-            this.webDesc.Location = new System.Drawing.Point(272, 13);
-            this.webDesc.Margin = new System.Windows.Forms.Padding(4);
-            this.webDesc.MinimumSize = new System.Drawing.Size(24, 22);
-            this.webDesc.Name = "webDesc";
-            this.webDesc.Size = new System.Drawing.Size(323, 473);
-            this.webDesc.TabIndex = 0;
-            // 
-            // lboWord
-            // 
-            this.lboWord.FormattingEnabled = true;
-            this.lboWord.ItemHeight = 16;
-            this.lboWord.Location = new System.Drawing.Point(16, 62);
-            this.lboWord.Margin = new System.Windows.Forms.Padding(4);
-            this.lboWord.Name = "lboWord";
-            this.lboWord.Size = new System.Drawing.Size(248, 388);
-            this.lboWord.TabIndex = 0;
             // 
             // cboSearch
             // 
             this.cboSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cboSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cboSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cboSearch.FormattingEnabled = true;
             this.cboSearch.Location = new System.Drawing.Point(16, 28);
             this.cboSearch.Margin = new System.Windows.Forms.Padding(4);
             this.cboSearch.Name = "cboSearch";
-            this.cboSearch.Size = new System.Drawing.Size(248, 24);
+            this.cboSearch.Size = new System.Drawing.Size(248, 408);
             this.cboSearch.TabIndex = 0;
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.Location = new System.Drawing.Point(271, 12);
+            this.txtDesc.Multiline = true;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(325, 475);
+            this.txtDesc.TabIndex = 0;
             // 
             // DictionaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 499);
-            this.Controls.Add(this.lboWord);
+            this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.cboSearch);
-            this.Controls.Add(this.webDesc);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -82,13 +71,12 @@
             this.Text = "Dictionary";
             this.Load += new System.EventHandler(this.DictionaryForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.WebBrowser webDesc;
-        private System.Windows.Forms.ListBox lboWord;
         private System.Windows.Forms.ComboBox cboSearch;
+        private System.Windows.Forms.TextBox txtDesc;
     }
 }

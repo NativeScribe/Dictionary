@@ -5,6 +5,8 @@ namespace NativeScribe
 {
     public partial class MainForm : Form
     {
+        private readonly DictionaryManage dictionary;
+
         public MainForm()
         {
             InitializeComponent();
@@ -12,7 +14,6 @@ namespace NativeScribe
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
             OpenChildForm(new DictionaryForm());
 
             btnDict.Enabled = false;
@@ -50,6 +51,8 @@ namespace NativeScribe
             {
                 Application.Exit();
             }
+
+            dictionary.Serialize();
         }
 
         private Form activeForm = null;
