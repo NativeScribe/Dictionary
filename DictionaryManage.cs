@@ -6,7 +6,8 @@ namespace NativeScribe
 {
     public class DictionaryManage
     {
-        private readonly string filePath = "data.xml";
+        private readonly string filePath = @"data.xml";
+
         private DictionaryItem items;
 
         public DictionaryItem Items { get => items; set => items = value; }

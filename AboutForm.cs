@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace NativeScribe
@@ -16,7 +17,7 @@ namespace NativeScribe
         {
             try
             {
-                System.Diagnostics.Process.Start("https://servdocs.syafiqhadzir.dev/Projects/NativeScribe/" + Version + "/ReleaseNote.txt");
+                Process.Start("https://servdocs.syafiqhadzir.dev/Projects/NativeScribe/" + Version + "/ReleaseNote.txt");
             }
             catch (Exception err)
             {
@@ -28,7 +29,7 @@ namespace NativeScribe
         {
             try
             {
-                System.Diagnostics.Process.Start("https://servdocs.syafiqhadzir.dev/Projects/NativeScribe/" + Version + "/License.txt");
+                Process.Start("https://servdocs.syafiqhadzir.dev/Projects/NativeScribe/" + Version + "/License.txt");
             }
             catch (Exception err)
             {
@@ -38,7 +39,7 @@ namespace NativeScribe
 
         private void LinkProject_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://nativescribe.syafiqhadzir.dev/");
+            Process.Start("https://nativescribe.syafiqhadzir.dev/");
         }
     }
 }

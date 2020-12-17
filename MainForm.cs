@@ -1,11 +1,12 @@
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace NativeScribe
 {
     public partial class MainForm : Form
     {
-        private readonly DictionaryManage dictionary;
+        private DictionaryManage dictionary;
 
         public MainForm()
         {
@@ -14,6 +15,7 @@ namespace NativeScribe
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            dictionary = new DictionaryManage();
             OpenChildForm(new DictionaryForm());
 
             btnDict.Enabled = false;
@@ -49,25 +51,31 @@ namespace NativeScribe
         {
             if (MessageBox.Show("Are you sure?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                dictionary.Serialize();
                 Application.Exit();
             }
-
-            dictionary.Serialize();
         }
 
         private Form activeForm = null;
 
         private void OpenChildForm(Form childForm)
         {
-            if (activeForm != null) activeForm.Close();
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            try
+            {
+                if (activeForm != null) activeForm.Close();
+                activeForm = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                panelChildForm.Controls.Add(childForm);
+                panelChildForm.Tag = childForm;
+                childForm.BringToFront();
+                childForm.Show();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void PanelChildForm_Paint(object sender, PaintEventArgs e)
@@ -88,9 +96,14 @@ namespace NativeScribe
         {
             if (MessageBox.Show("Are you sure?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                dictionary.Serialize();
                 Application.Exit();
             }
-            dictionary.Serialize();
+        }
+
+        private void UpdateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(@".\NativeScribe-Update.exe");
         }
     }
 }
