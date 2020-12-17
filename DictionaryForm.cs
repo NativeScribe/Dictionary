@@ -5,6 +5,9 @@ namespace NativeScribe
 {
     public partial class DictionaryForm : Form
     {
+        private DictionaryManage dictionary;
+        private int index = 0;
+
         public DictionaryForm()
         {
             InitializeComponent();
@@ -12,14 +15,47 @@ namespace NativeScribe
 
         private void DictionaryForm_Load(object sender, EventArgs e)
         {
+            dictionary = new DictionaryManage();
+
+            cbWord.DisplayMember = "Key";
+            dictionary.LoadDataToComboBox(cbWord);
+            cbWord.SelectedIndex = index;
+
+            lbWord.DisplayMember = "Key";
+            dictionary.LoadDataToListBox(lbWord);
+            lbWord.SelectedIndex = index;
         }
 
-        private void lboWord_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbWord_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ComboBox cb = sender as ComboBox;
+
+            if (cb.DataSource == null)
+            {
+                return;
+            }
+
+            Dictionary data = cb.SelectedItem as Dictionary;
+            txtDesc.Text = data.Explaination;
+
+            index = cbWord.SelectedIndex;
+            lbWord.SelectedIndex = index;
         }
 
-        private void cboSearch_SelectedIndexChanged(object sender, EventArgs e)
+        private void LbWord_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ListBox cb = sender as ListBox;
+
+            if (cb.DataSource == null)
+            {
+                return;
+            }
+
+            Dictionary data = cb.SelectedItem as Dictionary;
+            txtDesc.Text = data.Explaination;
+
+            index = lbWord.SelectedIndex;
+            cbWord.SelectedIndex = index;
         }
     }
 }

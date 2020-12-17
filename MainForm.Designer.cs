@@ -1,4 +1,4 @@
-﻿namespace NativeScribe
+namespace NativeScribe
 {
     partial class MainForm
     {
@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.lboWord = new System.Windows.Forms.ListBox();
-            this.webDesc = new System.Windows.Forms.WebBrowser();
-            this.cboSearch = new System.Windows.Forms.ComboBox();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelVer = new System.Windows.Forms.Panel();
             this.lblVersion = new System.Windows.Forms.Label();
@@ -47,9 +44,9 @@
             this.scholarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.developerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jSONEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelChildForm.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
             this.panelVer.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -57,58 +54,13 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Controls.Add(this.lboWord);
-            this.panelChildForm.Controls.Add(this.webDesc);
-            this.panelChildForm.Controls.Add(this.cboSearch);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.panelChildForm.Location = new System.Drawing.Point(222, 0);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(608, 499);
             this.panelChildForm.TabIndex = 0;
-            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
-            // 
-            // lboWord
-            // 
-            this.lboWord.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lboWord.FormattingEnabled = true;
-            this.lboWord.ItemHeight = 16;
-            this.lboWord.Location = new System.Drawing.Point(24, 67);
-            this.lboWord.Margin = new System.Windows.Forms.Padding(4);
-            this.lboWord.Name = "lboWord";
-            this.lboWord.Size = new System.Drawing.Size(248, 388);
-            this.lboWord.TabIndex = 0;
-            this.lboWord.SelectedIndexChanged += new System.EventHandler(this.lboWord_SelectedIndexChanged);
-            // 
-            // webDesc
-            // 
-            this.webDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.webDesc.Location = new System.Drawing.Point(280, 33);
-            this.webDesc.Margin = new System.Windows.Forms.Padding(4);
-            this.webDesc.MinimumSize = new System.Drawing.Size(24, 22);
-            this.webDesc.Name = "webDesc";
-            this.webDesc.Size = new System.Drawing.Size(306, 422);
-            this.webDesc.TabIndex = 0;
-            this.webDesc.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webDesc_DocumentCompleted);
-            // 
-            // cboSearch
-            // 
-            this.cboSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cboSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboSearch.FormattingEnabled = true;
-            this.cboSearch.Location = new System.Drawing.Point(24, 33);
-            this.cboSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.cboSearch.Name = "cboSearch";
-            this.cboSearch.Size = new System.Drawing.Size(248, 24);
-            this.cboSearch.TabIndex = 0;
-            this.cboSearch.SelectedIndexChanged += new System.EventHandler(this.cboSearch_SelectedIndexChanged);
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelChildForm_Paint);
             // 
             // panelSideMenu
             // 
@@ -143,9 +95,9 @@
             this.lblVersion.AutoSize = true;
             this.lblVersion.Location = new System.Drawing.Point(8, 27);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(118, 16);
+            this.lblVersion.Size = new System.Drawing.Size(126, 16);
             this.lblVersion.TabIndex = 0;
-            this.lblVersion.Text = "v1.0 (Build 200622)";
+            this.lblVersion.Text = "v1.1a (Build 201217)";
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExit
@@ -164,7 +116,7 @@
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // btnAbout
             // 
@@ -182,7 +134,7 @@
             this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAbout.UseVisualStyleBackColor = true;
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            this.btnAbout.Click += new System.EventHandler(this.BtnAbout_Click);
             // 
             // btnConfig
             // 
@@ -218,7 +170,7 @@
             this.btnDict.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDict.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDict.UseVisualStyleBackColor = true;
-            this.btnDict.Click += new System.EventHandler(this.btnDict_Click);
+            this.btnDict.Click += new System.EventHandler(this.BtnDict_Click);
             // 
             // btnHome
             // 
@@ -237,7 +189,7 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
             // panelLogo
             // 
@@ -266,15 +218,16 @@
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.scholarToolStripMenuItem,
             this.developerToolStripMenuItem,
+            this.updateToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // scholarToolStripMenuItem
             // 
             this.scholarToolStripMenuItem.Name = "scholarToolStripMenuItem";
-            this.scholarToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.scholarToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.scholarToolStripMenuItem.Text = "Scholar";
             // 
             // developerToolStripMenuItem
@@ -282,28 +235,35 @@
             this.developerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jSONEditorToolStripMenuItem});
             this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
-            this.developerToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.developerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.developerToolStripMenuItem.Text = "Developer";
             // 
             // jSONEditorToolStripMenuItem
             // 
             this.jSONEditorToolStripMenuItem.Name = "jSONEditorToolStripMenuItem";
-            this.jSONEditorToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.jSONEditorToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.jSONEditorToolStripMenuItem.Text = "JSON Editor";
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.UpdateToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -313,17 +273,15 @@
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NativeScribe™";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.panelChildForm.ResumeLayout(false);
             this.panelSideMenu.ResumeLayout(false);
             this.panelSideMenu.PerformLayout();
             this.panelVer.ResumeLayout(false);
@@ -345,9 +303,6 @@
         private System.Windows.Forms.Button btnDict;
         private System.Windows.Forms.Panel panelVer;
         private System.Windows.Forms.Label lblVersion;
-        private System.Windows.Forms.WebBrowser webDesc;
-        private System.Windows.Forms.ListBox lboWord;
-        private System.Windows.Forms.ComboBox cboSearch;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scholarToolStripMenuItem;
@@ -355,6 +310,7 @@
         private System.Windows.Forms.ToolStripMenuItem jSONEditorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
     }
 }
 
