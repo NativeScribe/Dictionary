@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace NativeScribe
@@ -90,7 +90,6 @@ namespace NativeScribe
             {
                 Application.Exit();
             }
-
             dictionary.Serialize();
         }
     }
